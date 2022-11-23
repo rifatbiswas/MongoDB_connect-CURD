@@ -1,0 +1,19 @@
+{
+  "name": "mongodbconnect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dbconfig.js",
+  "scripts": {
+    "start": "nodemon insertSingleDoc.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
