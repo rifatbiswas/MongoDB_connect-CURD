@@ -1,30 +1,30 @@
 const {client} = require("./dbconfig")
 
-const findMultipleDoc = async()=>{
+// const findMultipleDoc = async()=>{
 
-    try {
-        const database = client.db("learnmongo");
-        const users = database.collection("users");
+//     try {
+//         const database = client.db("learnmongo");
+//         const users = database.collection("users");
 
-        const query = {};
+//         const query = {};
 
-        const cursor = users.find(query);
+//         const cursor = users.find(query);
 
-        if ((await cursor.EstimatedDocumentCount) === 0) {
-            console.log("No documents found!");
-          }else{
-            const users = await cursor.toArray();
+//         if ((await cursor.EstimatedDocumentCount) === 0) {
+//             console.log("No documents found!");
+//           }else{
+//             const users = await cursor.toArray();
 
-            await users.forEach(users=>console.log(users));
-          }
+//             await users.forEach(users=>console.log(users));
+//           }
           
           
 
         
-    } catch (error) {
-       console.log(error); 
-    }finally{
-        await client.close();
-    }
-}
-findMultipleDoc();
+//     } catch (error) {
+//        console.log(error); 
+//     }finally{
+//         await client.close();
+//     }
+// }
+// findMultipleDoc();

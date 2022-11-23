@@ -1,21 +1,21 @@
-const {client} = require("./dbconfig")
+// const {client} = require("./dbconfig")
 
-const deletMultipleDoc=async()=>{
+// const deletMultipleDoc=async()=>{
 
-try {
+// try {
 
-    const database = client.db("learnmongo");
-    const users = database.collection("users");
+//     const database = client.db("learnmongo");
+//     const users = database.collection("users");
 
-    const query = {};
-    const result = await users.deleteMany(query);
-    console.log("Deleted " + result.deletedCount + " documents");
+//     const query = {};
+//     const result = await users.deleteMany(query);
+//     console.log("Deleted " + result.deletedCount + " documents");
     
-} catch (error) {
-    console.log(error);
-}finally{
-    await client.close();
-}
+// } catch (error) {
+//     console.log(error);
+// }finally{
+//     await client.close();
+// }
 
-}
-deletMultipleDoc();
+// }
+// deletMultipleDoc();
