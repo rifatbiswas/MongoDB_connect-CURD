@@ -1,29 +1,29 @@
-// const {client} = require("./dbconfig")
+const {client} = require("./dbconfig")
 
-// const updateMultipleDoc =async()=>{
+const updateMultipleDoc =async()=>{
 
-// try {
+try {
    
-//     const database = client.db("learnmongo");
-//     const users = database.collection("users");
+    const database = client.db("learnmongo");
+    const users = database.collection("users");
 
-//     const filter = {};
+    const filter = {};
 
-//     const updateDoc = {
-//         $set: {
-//           city:"Khula",
-//         },
-//       };
+    const updateDoc = {
+        $set: {
+          city:"Khula",
+        },
+      };
 
-//       const result = await users.updateMany(filter, updateDoc);
-//       console.log(`Updated ${result.modifiedCount} documents`);
+      const result = await users.updateMany(filter, updateDoc);
+      console.log(`Updated ${result.modifiedCount} documents`);
 
-// } catch (error) {
-//     console.log(error);
-// }finally{
+} catch (error) {
+    console.log(error);
+}finally{
 
-//     await client.close();
-// }
+    await client.close();
+}
 
-// }
-// updateMultipleDoc();
+}
+updateMultipleDoc();
